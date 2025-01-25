@@ -17,6 +17,9 @@
       "import": "./lib/server/index.js"
     }
   },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "vitest"
