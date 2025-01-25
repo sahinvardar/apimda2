@@ -1,8 +1,27 @@
 {
-  "private": true,
   "name": "@apimda/apimda2",
+  "license": "ISC",
+  "author": "Joseph Mays",
+  "type": "module",
+  "exports": {
+    "./client": {
+      "types": "./lib/client/index.d.ts",
+      "import": "./lib/client/index.js"
+    },
+    "./core": {
+      "types": "./lib/core/index.d.ts",
+      "import": "./lib/core/index.js"
+    },
+    "./server": {
+      "types": "./lib/server/index.d.ts",
+      "import": "./lib/server/index.js"
+    }
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "pnpm --filter @apimda/apimda2 run build",
+    "build": "tsc",
     "cdk-deploy": "pnpm run build && pnpm --filter example-hello-world run cdk-deploy",
     "cdk-destroy": "pnpm run build && pnpm --filter example-hello-world run cdk-destroy",
     "clean": "tsc --build --clean && pnpm run -r clean",
@@ -14,8 +33,14 @@
     "repo-clean": "git clean -xdf",
     "test": "pnpm run build && vitest run"
   },
+  "dependencies": {
+    "raw-body": "^2.5.2",
+    "zod": "^3.21.4"
+  },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
     "@types/node": "^18.16.18",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "eslint": "^8.6.0",
@@ -29,6 +54,7 @@
     "prettier-package-json": "^2.8.0",
     "prettier-plugin-organize-imports": "^3.2.4",
     "semantic-release": "^23.0.8",
+    "supertest": "^6.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "undici": "^6.14.1",

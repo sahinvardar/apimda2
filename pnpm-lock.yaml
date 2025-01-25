@@ -11,10 +11,23 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      raw-body:
+        specifier: ^2.5.2
+        version: 2.5.2
+      zod:
+        specifier: ^3.22.2
+        version: 3.22.4
     devDependencies:
+      '@types/aws-lambda':
+        specifier: ^8.10.119
+        version: 8.10.119
       '@types/node':
         specifier: ^18.16.18
         version: 18.16.18
+      '@types/supertest':
+        specifier: ^2.0.12
+        version: 2.0.16
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.7.1
         version: 7.7.1(@typescript-eslint/parser@7.7.1(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -54,6 +67,9 @@ importers:
       semantic-release:
         specifier: ^23.0.8
         version: 23.0.8(typescript@5.4.5)
+      supertest:
+        specifier: ^6.3.3
+        version: 6.3.4
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@18.16.18)(typescript@5.4.5)
@@ -67,30 +83,11 @@ importers:
         specifier: ^1.5.1
         version: 1.5.1(@types/node@18.16.18)
 
-  packages/apimda2:
-    dependencies:
-      raw-body:
-        specifier: ^2.5.2
-        version: 2.5.2
-      zod:
-        specifier: ^3.22.2
-        version: 3.22.4
-    devDependencies:
-      '@types/aws-lambda':
-        specifier: ^8.10.119
-        version: 8.10.119
-      '@types/supertest':
-        specifier: ^2.0.12
-        version: 2.0.16
-      supertest:
-        specifier: ^6.3.3
-        version: 6.3.4
-
   packages/examples/hello-world:
     dependencies:
       '@apimda/apimda2':
         specifier: workspace:*
-        version: link:../../apimda2
+        version: link:../../..
       aws-cdk-lib:
         specifier: ^2.84.0
         version: 2.177.0(constructs@10.4.2)
@@ -121,7 +118,7 @@ importers:
     dependencies:
       '@apimda/apimda2':
         specifier: workspace:*
-        version: link:../apimda2
+        version: link:../..
       zod:
         specifier: ^3.22.2
         version: 3.22.4
