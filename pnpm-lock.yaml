@@ -91,7 +91,7 @@ importers:
 
   packages/examples/hello-world:
     dependencies:
-      '@apimda/apimda':
+      '@apimda/apimda2':
         specifier: workspace:*
         version: link:../../apimda
       aws-cdk-lib:
@@ -122,7 +122,7 @@ importers:
 
   packages/integration-test:
     dependencies:
-      '@apimda/apimda':
+      '@apimda/apimda2':
         specifier: workspace:*
         version: link:../apimda
       zod:

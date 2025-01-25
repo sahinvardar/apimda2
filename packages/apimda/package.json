@@ -1,7 +1,7 @@
 {
-  "name": "@apimda/apimda",
+  "name": "@apimda/apimda2",
   "license": "ISC",
-  "author": "",
+  "author": "Joseph Mays",
   "type": "module",
   "exports": {
     "./client": {

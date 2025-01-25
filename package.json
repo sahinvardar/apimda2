@@ -2,12 +2,10 @@
   "private": true,
   "name": "@apimda/apimda2",
   "scripts": {
-    "build": "tsc --build && pnpm run -r build",
+    "build": "pnpm --filter @apimda/apimda2 run build",
     "cdk-deploy": "pnpm run build && pnpm --filter example-hello-world run cdk-deploy",
     "cdk-destroy": "pnpm run build && pnpm --filter example-hello-world run cdk-destroy",
     "clean": "tsc --build --clean && pnpm run -r clean",
-    "docs-build": "pnpm --filter docs run docs-build",
-    "docs-dev": "pnpm --filter docs run dev",
     "format": "prettier --plugin-search-dir . --write . && prettier-package-json --write",
     "preinstall": "npx only-allow pnpm",
     "lint": "prettier --plugin-search-dir . --check . && eslint \".\"",
