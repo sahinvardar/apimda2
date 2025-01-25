@@ -1,0 +1,34 @@
+{
+  "name": "@apimda/apimda",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "exports": {
+    "./client": {
+      "types": "./lib/client/index.d.ts",
+      "import": "./lib/client/index.js"
+    },
+    "./core": {
+      "types": "./lib/core/index.d.ts",
+      "import": "./lib/core/index.js"
+    },
+    "./server": {
+      "types": "./lib/server/index.d.ts",
+      "import": "./lib/server/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "raw-body": "^2.5.2",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
+    "@types/supertest": "^2.0.12",
+    "supertest": "^6.3.3"
+  },
+  "keywords": []
+}

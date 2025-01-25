@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "@apimda/integration-test",
+  "type": "module",
+  "scripts": {
+    "playground": "ts-node src/playground.ts"
+  },
+  "dependencies": {
+    "@apimda/apimda": "workspace:*",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119"
+  }
+}
