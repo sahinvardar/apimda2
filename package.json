@@ -1,6 +1,6 @@
 {
   "name": "@apimda/apimda2",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Joseph Mays",
   "type": "module",
   "exports": {
