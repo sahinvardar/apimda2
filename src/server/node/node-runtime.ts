@@ -1,5 +1,5 @@
-import { AnyControllerImpl } from '@apimda/core';
 import { IncomingMessage, ServerResponse } from 'node:http';
+import { AnyControllerImpl } from '../../core/index.js';
 import { HttpErrorStatusCode, statusCodeToDesc } from '../http-status.js';
 import { ServerOperation, ServerResult } from '../server-framework.js';
 import { NodeExtractor } from './node-extractor.js';

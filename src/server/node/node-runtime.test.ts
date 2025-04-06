@@ -1,7 +1,7 @@
-import { a } from '@apimda/core';
 import { createServer } from 'node:http';
 import request from 'supertest';
 import { describe, expect, test } from 'vitest';
+import { a } from '../../core/index.js';
 import { createRequestListener } from './node-runtime.js';
 
 const greeting = { greeting: 'Hi!' };

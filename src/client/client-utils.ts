@@ -1,4 +1,4 @@
-import { AnyInputDef, AnyOperationDef, BodyBinaryParamDef, BodyTextParamDef, ParamLocation } from '@apimda/core';
+import { AnyInputDef, AnyOperationDef, BodyBinaryParamDef, BodyTextParamDef, ParamLocation } from '../core/index.js';
 
 export type ParamValue = number | boolean | string | object | Blob | null | undefined;
 

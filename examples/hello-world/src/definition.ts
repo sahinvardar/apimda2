@@ -1,4 +1,4 @@
-import { a } from '@apimda/core';
+import { a } from '@apimda/apimda2/core';
 import { z } from 'zod';
 
 export const helloController = a.controller().define({

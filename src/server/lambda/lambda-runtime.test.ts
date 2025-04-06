@@ -1,6 +1,6 @@
-import { a } from '@apimda/core';
 import type { APIGatewayProxyEventV2 as Event } from 'aws-lambda';
 import { describe, expect, test } from 'vitest';
+import { a } from '../../core/index.js';
 import { createAwsLambdaHandler, toLambdaCookies, toLambdaResult } from './lambda-runtime.js';
 
 describe('toLambdaCookies tests', () => {

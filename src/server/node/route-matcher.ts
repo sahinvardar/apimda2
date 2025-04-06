@@ -1,4 +1,4 @@
-import { PathMatcher } from '@apimda/core';
+import { PathMatcher } from '../../core/index.js';
 
 interface RouteMatch<T> {
   path: string;

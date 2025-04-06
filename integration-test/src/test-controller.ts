@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { InferControllerImplType, a } from '@apimda/core';
+import { InferControllerImplType, a } from '@apimda/apimda2/core';
 import { z } from 'zod';
 
 export const testControllerDef = a.controller('/base').define({

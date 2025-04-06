@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { AnyOperationDef, AnyOutputType, AnyParamDef, BodyBinaryParamDef, BodyTextParamDef } from '@apimda/core';
 import { ZodError } from 'zod';
+import { AnyOperationDef, AnyOutputType, AnyParamDef, BodyBinaryParamDef, BodyTextParamDef } from '../core/index.js';
 import { ApimdaResult } from './apimda-result.js';
 import { HttpError } from './http-error.js';
 

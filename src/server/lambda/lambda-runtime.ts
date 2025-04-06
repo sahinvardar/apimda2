@@ -1,5 +1,5 @@
-import { AnyControllerImpl } from '@apimda/core';
 import type { APIGatewayProxyEventV2 as Event, APIGatewayProxyStructuredResultV2 as Result } from 'aws-lambda';
+import { AnyControllerImpl } from '../../core/index.js';
 import { ServerOperation, ServerResult } from '../server-framework.js';
 import { LambdaExtractor } from './lambda-extractor.js';
 

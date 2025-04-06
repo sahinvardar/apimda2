@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { AnyOperationDef, BinaryOutputDef, ControllerDef, InferControllerClientType } from '@apimda/core';
+import { AnyOperationDef, BinaryOutputDef, ControllerDef, InferControllerClientType } from '../core/index.js';
 import { buildHeaders, buildUrl, getHttpMethod, paramsByLocation } from './client-utils.js';
 
 // eslint-disable-next-line no-var

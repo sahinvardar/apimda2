@@ -6,9 +6,7 @@
     "playground": "ts-node src/playground.ts"
   },
   "dependencies": {
-    "@apimda/client": "workspace:*",
-    "@apimda/core": "workspace:*",
-    "@apimda/server": "workspace:*",
+    "@apimda/apimda2": "workspace:*",
     "zod": "^3.21.4"
   },
   "devDependencies": {

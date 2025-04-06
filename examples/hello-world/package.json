@@ -9,9 +9,7 @@
     "clean": "tsc --build --clean"
   },
   "dependencies": {
-    "@apimda/client": "workspace:*",
-    "@apimda/core": "workspace:*",
-    "@apimda/server": "workspace:*",
+    "@apimda/apimda2": "workspace:*",
     "aws-cdk-lib": "^2.84.0",
     "constructs": "^10.2.54",
     "zod": "^3.21.4"

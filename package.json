@@ -1,24 +1,46 @@
 {
-  "private": true,
   "name": "@apimda/apimda2",
+  "license": "MIT",
+  "author": "Joseph Mays",
+  "type": "module",
+  "exports": {
+    "./client": {
+      "types": "./lib/client/index.d.ts",
+      "import": "./lib/client/index.js"
+    },
+    "./core": {
+      "types": "./lib/core/index.d.ts",
+      "import": "./lib/core/index.js"
+    },
+    "./server": {
+      "types": "./lib/server/index.d.ts",
+      "import": "./lib/server/index.js"
+    }
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "build": "tsc --build && pnpm run -r build",
+    "build": "tsc",
     "cdk-deploy": "pnpm run build && pnpm --filter example-hello-world run cdk-deploy",
     "cdk-destroy": "pnpm run build && pnpm --filter example-hello-world run cdk-destroy",
     "clean": "tsc --build --clean && pnpm run -r clean",
-    "docs-build": "pnpm --filter docs run docs-build",
-    "docs-dev": "pnpm --filter docs run dev",
     "format": "prettier --plugin-search-dir . --write . && prettier-package-json --write",
     "preinstall": "npx only-allow pnpm",
     "lint": "prettier --plugin-search-dir . --check . && eslint \".\"",
     "playground": "pnpm --filter integration-test run playground",
     "prepare": "husky install",
-    "release": "pnpm --filter \"./packages/**\" exec -- semantic-release -e semantic-release-monorepo",
     "repo-clean": "git clean -xdf",
     "test": "pnpm run build && vitest run"
   },
+  "dependencies": {
+    "raw-body": "^2.5.2",
+    "zod": "^3.21.4"
+  },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
     "@types/node": "^18.16.18",
+    "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "eslint": "^8.6.0",
@@ -32,7 +54,7 @@
     "prettier-package-json": "^2.8.0",
     "prettier-plugin-organize-imports": "^3.2.4",
     "semantic-release": "^23.0.8",
-    "semantic-release-monorepo": "^8.0.2",
+    "supertest": "^6.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "undici": "^6.14.1",
@@ -53,11 +75,5 @@
     "package.json": "prettier-package-json --write",
     "*.ts": "eslint"
   },
-  "packageManager": "pnpm@9.0.6",
-  "pnpm": {
-    "overrides": {
-      "@types/aws-lambda": "^8.10.119",
-      "zod": "^3.22.2"
-    }
-  }
+  "packageManager": "pnpm@9.0.6"
 }

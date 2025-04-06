@@ -1,35 +1,18 @@
 {
   "compilerOptions": {
-    "composite": true,
     "declaration": true,
-    "declarationMap": true,
-    "incremental": true,
     "lib": ["ES2022"],
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "nodenext",
     "target": "ES2022",
     "strict": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "lib",
+    "rootDir": "src"
   },
-  "files": [],
-  "exclude": ["**/*.config.ts"],
-  "references": [
-    {
-      "path": "./packages/client"
-    },
-    {
-      "path": "./packages/core"
-    },
-    {
-      "path": "./packages/server"
-    },
-    {
-      "path": "./integration-test"
-    }
-  ],
-  "ts-node": {
-    "esm": true
-  }
+  "include": ["./src/**/*"],
+  "exclude": ["**/*.test.ts"]
 }

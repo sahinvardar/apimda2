@@ -1,6 +1,6 @@
-import { AnyInputDef, a } from '@apimda/core';
 import { describe, expect, test } from 'vitest';
 import { z } from 'zod';
+import { AnyInputDef, a } from '../core/index.js';
 import {
   buildHeaders,
   buildPath,
